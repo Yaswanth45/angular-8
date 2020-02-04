@@ -1,0 +1,27 @@
+div{
+    color: coral;
+}
+table, thead, td, tbody {
+    border:1px solid black;
+    background-color:rgb(204, 199, 188);
+    border-color: tomato;
+    text-align: center;
+    /* align:center; */
+}
+h2{
+    color: whitesmoke;
+    text-align: center;
+    background-color: indigo;
+}
+h3{
+    color: yellowgreen;
+    text-align: center;
+    background-color: lightcoral;
+}
+button{
+    background-color:wheat;
+}
+section{
+    text-align: center;
+    background-color: turquoise;
+}

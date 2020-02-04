@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assign-2</title>
+</head>
+<body>
+  <section>
+  <h2>{{message}}</h2>
+  <h3>Angular {{version}} Topics</h3>
+  <div>
+    Enter Topic:
+    <input type="text" placeholder="enter topic" #currentTopic/>
+    <button (click)="addTopic(currentTopic.value)">AddTopic</button>
+    <button (click)="searchTopic(currentTopic.value)">Search</button>
+    <button (click)="deleteTopics(currentTopic.value)">Delete</button>
+    <button (click)="updateTopics(currentTopic.value)">Update</button>
+  </div>
+  <br/>
+  <table>
+    <thead>
+      <tr>
+        <td>Topic Id</td>
+        <td>Topic Name</td>
+        <td rowspan="2">Action</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i=index, let t of topics">
+        <td>
+          {{i+1}}
+        </td>
+        <td>
+          {{t}}
+        </td>
+        <td>
+          <button (click)="deleteTopic(i)">Delete</button>
+        </td>
+        <td>
+          <button (click)="editTopic(i)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <td colspan="4">No of topics : {{topics.length}}</td>
+    </tfoot>
+  </table>
+</section>
+</body>
+</html>
